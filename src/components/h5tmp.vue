@@ -214,7 +214,9 @@ export default {
     a();
     $("p").addClass("sp");
 
-    // $.get("", {}, function(data, status, xhr) {});
+    $.get("/wx/get", {}, function(data, status, xhr) {
+      console.log(data);
+    });
   },
   // beforeUpdate: function() {
   //   console.log("beforeUpdate");
@@ -456,7 +458,7 @@ p {
 /* transition */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-enter,
