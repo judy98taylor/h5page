@@ -18,5 +18,13 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  }
+  },
+  postcss: [
+    require("precss"),
+    require("postcss-cssnext")({
+      browsers: ['last 2 versions', 'safari 5', 'ios 6', 'android 4'],
+      cascade: true,
+      warnForDuplicates: false
+    })
+  ],
 }
