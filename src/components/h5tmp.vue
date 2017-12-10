@@ -132,7 +132,7 @@
       <div class="p p8" v-show="curPage==8">
         <!-- <img src="../assets/img/s100.jpg" alt=""> -->
         <img :src="require('../assets/img/s'+totalScore+'.jpg')" alt="" v-if="curPage==8">
-        <a href="http://www.baidu.com" class="link">
+        <a href="https://www.bagevent.com/event/932861?bag_track=ettmpower" class="link" onclick="_hmt.push(['_trackEvent', 'btn', 'click', 'link', 'https://www.bagevent.com/event/932861?bag_track=ettmpower']);">
           <img src="../assets/img/p8link.png" alt="">
           <!-- <p>{{totalScore}}</p> -->
         </a>
