@@ -3,169 +3,139 @@
 
     <transition name="fade">
       <div class="p p1" v-show="curPage==1">
-        <h1>1111100001</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <div class="loading1">
+          <img class="" src="../assets/img/p1loading2.png" alt="">
+          <div class="progressBar"></div>
+        </div>
+        <div class="loading2">
+          <img class="circle" src="../assets/img/p1loading1.png" alt="">
+          <img class="logo" src="../assets/img/p1logo.png" alt="">
+        </div>
+
+        <div class="txt">
+          <img src="../assets/img/p1h.png" alt="">
+          <div class="dian">
+            <div class="dotting"></div>
+          </div>
+        </div>
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p2" v-show="curPage==2">
-        <h1>22222</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img class="p2h tada" src="../assets/img/p2h.png" alt="">
+        <br>
+        <br>
+        <br>
+        <img class="p2h2" src="../assets/img/p2h2.png" alt="">
+        <br>
+        <img class="go flash" src="../assets/img/p2go.png" alt="" @click="next()">
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p3" v-show="curPage==3">
-        <h1>3333333</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="../assets/img/p3q.png" alt="" class="suofang">
+        <br>
+        <img src="../assets/img/p3a1.png" alt="" class="option" @click="addScore($event,15)">
+        <img src="../assets/img/p3a2.png" alt="" class="option" @click="addScore($event,20)">
+        <img src="../assets/img/p3a3.png" alt="" class="option" @click="addScore($event,10)">
+        <img src="../assets/img/p3a4.png" alt="" class="option" @click="addScore($event,5)" style="margin-top: -.2rem;">
+        <img class="next" src="../assets/img/p3next.png" alt="" @click="next()" v-show="curScore">
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p4" v-show="curPage==4">
-        <h1>444444</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="../assets/img/p4q.png" alt="" class="suofang">
+        <br>
+        <br>
+        <img src="../assets/img/p4a1.png" alt="" class="option" @click="addScore($event,15)">
+        <img src="../assets/img/p4a2.png" alt="" class="option" @click="addScore($event,10)" style="margin-top: -.5rem;">
+        <img src="../assets/img/p4a3.png" alt="" class="option" @click="addScore($event,5)">
+        <img src="../assets/img/p4a4.png" alt="" class="option" @click="addScore($event,20)">
+        <img class="next" src="../assets/img/p3next.png" alt="" @click="next()" v-show="curScore">
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p5" v-show="curPage==5">
-        <h1>5555555</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="../assets/img/p5q.png" alt="" class="suofang">
+        <br>
+        <img src="../assets/img/p5a1.png" alt="" class="option" @click="addScore($event,20)">
+        <img src="../assets/img/p5a2.png" alt="" class="option" @click="addScore($event,5)">
+        <img src="../assets/img/p5a3.png" alt="" class="option" @click="addScore($event,20)">
+        <img src="../assets/img/p5a4.png" alt="" class="option" @click="addScore($event,10)">
+        <img class="next" src="../assets/img/p3next.png" alt="" @click="next()" v-show="curScore">
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p6" v-show="curPage==6">
-        <h1>666666</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="../assets/img/p6q.png" alt="" class="suofang">
+        <br>
+        <img src="../assets/img/p6a1.png" alt="" class="option" @click="addScore($event,5)">
+        <img src="../assets/img/p6a2.png" alt="" class="option" @click="addScore($event,10)">
+        <img src="../assets/img/p6a3.png" alt="" class="option" @click="addScore($event,20)" style="margin-top:-.2rem;">
+        <img src="../assets/img/p6a4.png" alt="" class="option" @click="addScore($event,15)">
+        <img class="next" src="../assets/img/p3next.png" alt="" @click="next()" v-show="curScore">
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p7" v-show="curPage==7">
-        <h1>7777777</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="../assets/img/p7q.png" alt="" class="suofang">
+        <br>
+        <img src="../assets/img/p7a1.png" alt="" class="option" @click="addScore($event,5)">
+        <img src="../assets/img/p7a2.png" alt="" class="option" @click="addScore($event,10)">
+        <br>
+        <img src="../assets/img/p7a3.png" alt="" class="option" @click="addScore($event,20)">
+        <br>
+        <img src="../assets/img/p7a4.png" alt="" class="option" @click="addScore($event,15)" style="margin-top: -.2rem;">
+        <img class="next" src="../assets/img/p3next.png" alt="" @click="next()" v-show="curScore">
       </div>
     </transition>
 
     <transition name="fade">
       <div class="p p8" v-show="curPage==8">
-        <h1>88888888888888</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
-      </div>
-    </transition>
-
-    <transition name="fade">
-      <div class="p p9" v-show="curPage==9">
-        <h1>999999999</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
-      </div>
-    </transition>
-
-    <transition name="fade">
-      <div class="p p10" v-show="curPage==10">
-        <h1>7777777</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
-      </div>
-    </transition>
-
-    <transition name="fade">
-      <div class="p p11" v-show="curPage==11">
-        <h1>88888888888888</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
-      </div>
-    </transition>
-
-    <transition name="fade">
-      <div class="p p12" v-show="curPage==12">
-        <h1>999999999</h1>
-        <img src="../assets/666.gif" alt="">
-        <p>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-          <span>a</span>
-        </p>
-        <button @click="next()">next</button>
+        <!-- <img src="../assets/img/s100.jpg" alt=""> -->
+        <img :src="require('../assets/img/s'+totalScore+'.jpg')" alt="" v-if="curPage==8">
+        <a href="http://www.baidu.com" class="link">
+          <img src="../assets/img/p8link.png" alt="">
+          <!-- <p>{{totalScore}}</p> -->
+        </a>
       </div>
     </transition>
 
@@ -173,200 +143,287 @@
 </template>
 
 <script>
-var $ = require("npm-zepto");
+  var $ = require("npm-zepto");
 
-export default {
-  name: "h5",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App",
-      // curPage: 0,
-      curPage: 1
-    };
-  },
-  // 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
-  beforeCreate: function() {
-    // console.log("beforeCreate");
-  },
-  // 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。
-  created: function() {
-    // console.log("created");
-  },
-  // 以下钩子在服务器端渲染期间不被调用。
-  // 在挂载开始之前被调用：相关的 render 函数首次被调用。
-  beforeMount: function() {
-    // console.log("beforeMount");
-  },
-  // el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。
-  mounted: function() {
-    // console.log("mounted");
+  export default {
+    name: "h5",
+    data() {
+      return {
+        // curPage: 1,
+        curPage: 1,
+        curScore: 0,
+        totalScore: 0,
+        progressValue: 0,
+        btnS: 1,
+      };
+    },
+    // 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
+    beforeCreate: function () {
+      // console.log("beforeCreate");
+    },
+    // 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。
+    created: function () {
+      // console.log("created");
+    },
+    // 以下钩子在服务器端渲染期间不被调用。
+    // 在挂载开始之前被调用：相关的 render 函数首次被调用。
+    beforeMount: function () {
+      // console.log("beforeMount");
+    },
+    // el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。
+    mounted: function () {
+      // console.log("mounted");
 
-    // // 注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：
-    // this.$nextTick(function() {
-    //   // Code that will run only after the
-    //   // entire view has been rendered
-    // });
+      // // 注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：
+      // this.$nextTick(function() {
+      //   // Code that will run only after the
+      //   // entire view has been rendered
+      // });
 
-    const self = this;
-    var a = () => {
-      console.log("fn");
-    };
-    a();
-    $("p").addClass("sp");
 
-    $.get("/wx/get", {}, function(data, status, xhr) {
-      console.log(data);
-    });
-  },
-  // beforeUpdate: function() {
-  //   console.log("beforeUpdate");
-  // },
-  // updated: function() {
-  //   console.log("updated");
-  // },
-  // activated: function() {
-  //   console.log("activated");
-  // },
-  // deactivated: function() {
-  //   console.log("deactivated");
-  // },
-  // beforeDestroy: function() {
-  //   console.log("beforeDestroy");
-  // },
-  // destroyed: function() {
-  //   console.log("destroyed");
-  // },
-  // errorCaptured: function() {
-  //   console.log("errorCaptured");
-  // }
-  methods: {
-    next: function() {
+
       const self = this;
-      self.curPage++;
-      self.curPage =
-        self.curPage % 12 > 0 && self.curPage % 12 < 8 ? self.curPage % 12 : 1;
+      // img preload
+      function imgPreload(imgList, cbk) {
+        let count = 0;
+        let progressValue = '';
+        imgList.forEach((v, i, a) => {
+          let imgObj = new Image();
+          imgObj.onload = imgObj.onerror = () => {
+            // progress
+            progressValue = Math.round(count / imgList.length * 100) + '%';
+            if (count === imgList.length - 1) {
+              // 隐藏load
+              cbk && cbk();
+            }
+            count++;
+          }
+          imgObj.src = v;
+        });
+      }
+      let imgList1 = [
+        require('../assets/img/p1bg.jpg'),
+        require('../assets/img/p2bg.jpg'),
+        require('../assets/img/p2h2.png'),
+        require('../assets/img/p2h.png'),
+        require('../assets/img/p3a4.png'),
+        require('../assets/img/p3q.png'),
+      ];
+      let imgList2 = [
+        require('../assets/img/s100.jpg'),
+        // require('../assets/img/s90.jpg'),
+        // require('../assets/img/s80.jpg'),
+        // require('../assets/img/s70.jpg'),
+        // require('../assets/img/s60.jpg'),
+        // require('../assets/img/s50.jpg'),
+        // require('../assets/img/s40.jpg'),
+        // require('../assets/img/s30.jpg'),
+        // require('../assets/img/s95.jpg'),
+        // require('../assets/img/s85.jpg'),
+        // require('../assets/img/s75.jpg'),
+        // require('../assets/img/s65.jpg'),
+        // require('../assets/img/s55.jpg'),
+        // require('../assets/img/s45.jpg'),
+        // require('../assets/img/s35.jpg'),
+        // require('../assets/img/s25.jpg'),
+      ];
+
+
+      imgPreload(imgList1, () => {
+        self.curPage = 2;
+        imgPreload(imgList2);
+      });
+
+
+      // // location.search
+      // let arr = location.search.replace('?', '').split('&');
+      // let obj = {};
+      // arr.forEach((vv) => {
+      //   let k = vv.split('=')[0];
+      //   let v = vv.split('=')[1];
+      //   obj[k] = v;
+      // });
+      // // console.log(obj);
+
+      // obj.p && (self.curPage = obj.p);
+
+
+      // $.get("/wx/get", {}, function (data, status, xhr) {
+      //   console.log(data);
+      // });
+    },
+    // beforeUpdate: function() {
+    //   console.log("beforeUpdate");
+    // },
+    // updated: function() {
+    //   console.log("updated");
+    // },
+    // activated: function() {
+    //   console.log("activated");
+    // },
+    // deactivated: function() {
+    //   console.log("deactivated");
+    // },
+    // beforeDestroy: function() {
+    //   console.log("beforeDestroy");
+    // },
+    // destroyed: function() {
+    //   console.log("destroyed");
+    // },
+    // errorCaptured: function() {
+    //   console.log("errorCaptured");
+    // }
+    methods: {
+      addScore(e, n) {
+        const self = this;
+        $('.option').removeClass('on');
+        $('.option').addClass('off');
+        $(e.target).removeClass('off');
+        $(e.target).addClass('on');
+        this.curScore = n;
+        console.log('curPage:' + self.curPage + ',curScore:' + self.curScore + ',totalScore:' + self.totalScore);
+      },
+      next: function () {
+        const self = this;
+        if (!self.btnS) return;
+        self.btnS = 0;
+
+        if (self.curPage == 2) {
+          self.curPage++;
+        } else if (self.curScore) {
+          self.totalScore += self.curScore;
+          self.curScore = 0;
+          self.curPage++;
+        } else {
+          console.log('没选，当前页面是第?页:' + self.curPage);
+        }
+        self.btnS = 1;
+
+        console.log('curPage:' + self.curPage + ',curScore:' + self.curScore + ',totalScore:' + self.totalScore);
+
+      },
     }
-  }
-};
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-*,
-html,
-body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
+  *,
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-p {
-  font-size: 0.24rem;
-  line-height: 1.5;
-  transition: transform 1s;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-}
+  p {
+    font-size: 0.24rem;
+    line-height: 1.5;
+  }
 
-img {
-  width: 100%;
-  display: block;
-}
-img:not([src]) {
-  visibility: hidden;
-}
+  ul {
+    list-style-type: none;
+  }
 
-.df {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
+  img {
+    width: 100%;
+    display: block;
+  }
 
-/* 无box相关支持 使用inline-block hack */
+  img:not([src]) {
+    visibility: hidden;
+  }
 
-.fww {
-  flex-wrap: wrap;
-}
+  .df {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
 
-.fdr {
-  flex-direction: row;
-}
+  /* 无box相关支持 使用inline-block hack */
 
-.fdc {
-  flex-direction: column;
-}
+  .fww {
+    flex-wrap: wrap;
+  }
 
-.jcc {
-  justify-content: center;
-  box-align: center;
-  -webkit-box-align: center;
-}
+  .fdr {
+    flex-direction: row;
+  }
 
-.jcfs {
-  justify-content: flex-start;
-}
+  .fdc {
+    flex-direction: column;
+  }
 
-.jcfe {
-  justify-content: flex-end;
-}
+  .jcc {
+    justify-content: center;
+    box-align: center;
+    -webkit-box-align: center;
+  }
 
-.jcsb {
-  justify-content: space-between;
-}
+  .jcfs {
+    justify-content: flex-start;
+  }
 
-.jcsa {
-  justify-content: space-around;
-}
+  .jcfe {
+    justify-content: flex-end;
+  }
 
-.acfs {
-  /*align-content: flex-start;*/
-  /*align-items: flex-start;*/
-  align-self: flex-start;
-}
+  .jcsb {
+    justify-content: space-between;
+  }
 
-.ais {
-  align-items: stretch;
-}
+  .jcsa {
+    justify-content: space-around;
+  }
 
-.aic {
-  align-items: center;
-  box-pack: center;
-  -webkit-box-pack: center;
-}
+  .acfs {
+    /*align-content: flex-start;*/
+    /*align-items: flex-start;*/
+    align-self: flex-start;
+  }
 
-.f1 {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  position: relative;
-}
+  .ais {
+    align-items: stretch;
+  }
 
-/* 兼容ios8 */
+  .aic {
+    align-items: center;
+    box-pack: center;
+    -webkit-box-pack: center;
+  }
 
-/* IE 不支持 box-pack 和 box-align 属性。 */
+  .f1 {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+  }
 
-.jcc.aic {
-  box-align: center;
-  -webkit-box-align: center;
-  box-pack: center;
-  -webkit-box-pack: center;
-}
+  /* 兼容ios8 */
 
-/*.f1:nth-child(1) {
+  /* IE 不支持 box-pack 和 box-align 属性。 */
+
+  .jcc.aic {
+    box-align: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    -webkit-box-pack: center;
+  }
+
+  /*.f1:nth-child(1) {
   background-color: red;
 }
 
@@ -382,41 +439,47 @@ img:not([src]) {
   background-color: green;
 }*/
 
-.tac {
-  text-align: center;
-}
+  .tac {
+    text-align: center;
+  }
 
-.tal {
-  text-align: left;
-}
+  .tal {
+    text-align: left;
+  }
 
-.tar {
-  text-align: right;
-}
+  .tar {
+    text-align: right;
+  }
 
-.taj {
-  text-align: justify;
-}
-.fz44r {
-  font-size: 0.44rem;
-}
-.fz4r {
-  font-size: 0.4rem;
-}
-.fz36r {
-  font-size: 0.36rem;
-}
-.fz32r {
-  font-size: 0.32rem;
-}
-.fz24r {
-  font-size: 0.24rem;
-}
-.fz2r {
-  font-size: 0.2rem;
-}
+  .taj {
+    text-align: justify;
+  }
 
-/* .popup {
+  .fz44r {
+    font-size: 0.44rem;
+  }
+
+  .fz4r {
+    font-size: 0.4rem;
+  }
+
+  .fz36r {
+    font-size: 0.36rem;
+  }
+
+  .fz32r {
+    font-size: 0.32rem;
+  }
+
+  .fz24r {
+    font-size: 0.24rem;
+  }
+
+  .fz2r {
+    font-size: 0.2rem;
+  }
+
+  /* .popup {
   position: fixed;
   z-index: 999;
   top: 0;
@@ -433,36 +496,225 @@ img:not([src]) {
   }
 } */
 
-p {
-  background: red;
-  font-size: 1rem;
+  /* start */
 
-  span {
-    background: green;
-    font-size: 0.4rem;
+  .p {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('../assets/img/p2bg.jpg') no-repeat center top #000;
+    background-size: cover;
+    .go,
+    .next {
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      height: 1rem;
+    }
   }
 
-  display: flex;
-}
+  .p:first-child {
+    background: url('../assets/img/p1bg.jpg') no-repeat center top #000;
+    background-size: cover;
+  }
 
-/* start */
-.p {
-  width: 100vw;
-  height: 100vh;
-}
+  .p1 {
+    .loading1 {
+      padding-top: 0.2rem;
+      img {
+        width: 3rem;
+      }
+      .progressBar {
+        position: absolute;
+        top: 0.92rem;
+        left: 0.5rem;
+        height: .1rem;
+        width: 2.5rem;
+        border-radius: .1rem;
+        background: red;
+        animation: loadProgress 2s infinite linear;
+      }
+    }
+    .loading2 {
+      width: 5rem;
+      height: 5rem;
+      margin: 0 auto;
+      .circle {
+        animation: loadCircle 2s infinite linear;
+        transform-origin: 50% 50%;
+      }
+      .logo {
+        position: absolute;
+        top: 1.3rem;
+        left: 1.5rem;
+        width: 2rem;
+      }
+    }
+    .txt {
+      width: 5rem;
+      margin: 0 auto;
+      img {
+        height: 1.6rem;
+        width: auto;
+        display: inline-block;
+        margin-left: -1rem;
+      }
+      .dian {
+        position: absolute;
+        top: .9rem;
+        right: 1rem;
+      }
+      .dotting {
+        display: inline-block;
+        min-width: .2rem;
+        min-height: .2rem;
+        box-shadow: .2rem 0#fff, .6rem 0 #fff, 1rem 0 #fff;
+        animation: dot 1s infinite step-start both;
+        border-radius: 50%;
+      }
 
-.p:nth-child(2n) {
-  background: aqua;
-}
+      .dotting:before {
+        content: '...';
+      }
+      /* IE8 */
+      .dotting::before {
+        content: '';
+      }
 
-/* transition */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease-in-out;
-}
+      :root .dotting {
+        margin-right: .8rem;
+      }
 
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
+    }
+  }
+
+  .p2 {
+    .p2h {
+      /* padding-top: 2rem; */
+      width: 5rem;
+      margin: 0 auto;
+    }
+  }
+
+  .p3,
+  .p4,
+  .p5,
+  .p6,
+  .p7 {
+    img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    /* img:first-child {
+      padding-top: 1.6rem;
+      width: 5rem;
+      margin: 0 auto;
+    } */
+  }
+
+  .p>.option {
+    opacity: 0.7;
+  }
+
+  .p>.option.on {
+    opacity: 1;
+    /* animation: suofang 1s infinite linear; */
+  }
+
+  .link {
+    text-decoration: none;
+    position: absolute;
+    /* background: red; */
+    width: 5rem;
+    top: 9.5rem;
+    left: 1.4rem;
+    /* display: none; */
+  }
+
+  .tada {
+    animation: tada 1s infinite linear;
+    transform-origin: 50% 50%;
+  }
+
+  @-webkit-keyframes tada {
+    0%,
+    100% {
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+    50% {
+      transform: rotate3d(0, 0, 1, 10deg);
+    }
+  }
+
+  .suofang {
+    animation: suofang 1s infinite linear;
+  }
+
+  @-webkit-keyframes suofang {
+    0%,
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  }
+
+  .flash {
+    animation: flash 1s infinite linear;
+  }
+
+  @-webkit-keyframes flash {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* IE9+,FF,CH,OP,SF */
+
+  @-webkit-keyframes dot {
+    25% {
+      box-shadow: none;
+    }
+    50% {
+      box-shadow: .2rem 0 #fff;
+    }
+    75% {
+      box-shadow: .2rem 0 #fff, .6rem 0 #fff;
+    }
+  }
+
+  @-webkit-keyframes loadProgress {
+    0% {
+      width: 1%;
+    }
+    100% {
+      width: 2.5rem;
+    }
+  }
+
+  @-webkit-keyframes loadCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* transition */
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
 </style>

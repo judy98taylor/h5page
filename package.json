@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "apreload": "^2.2.6",
     "npm-zepto": "^1.1.7",
     "vue": "^2.5.2"
   },
