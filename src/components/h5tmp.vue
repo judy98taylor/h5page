@@ -723,7 +723,7 @@
   }
 
   .suofang {
-    animation: suofang 1s infinite linear;
+    animation: suofang 2s infinite linear;
   }
 
   @-webkit-keyframes suofang {
@@ -732,7 +732,7 @@
       transform: scale3d(1, 1, 1);
     }
     50% {
-      transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.05, 1.05, 1.05);
     }
   }
 
