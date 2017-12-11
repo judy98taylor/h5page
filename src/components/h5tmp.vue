@@ -248,32 +248,57 @@
       // obj.p && (self.curPage = obj.p);
 
 
-      // $.get("/wx/get", {}, function (data, status, xhr) {
-      //   console.log(data);
-      // });
+      self.initWxShare();
     },
-    // beforeUpdate: function() {
-    //   console.log("beforeUpdate");
-    // },
-    // updated: function() {
-    //   console.log("updated");
-    // },
-    // activated: function() {
-    //   console.log("activated");
-    // },
-    // deactivated: function() {
-    //   console.log("deactivated");
-    // },
-    // beforeDestroy: function() {
-    //   console.log("beforeDestroy");
-    // },
-    // destroyed: function() {
-    //   console.log("destroyed");
-    // },
-    // errorCaptured: function() {
-    //   console.log("errorCaptured");
-    // }
     methods: {
+      initWxShare() {
+        $.get("/wx/get_wxData_share", {}, function (data, status, xhr) {
+          console.log(data);
+
+          wx.config({
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: 'wx43d17d7d013dc48f', // 必填，公众号的唯一标识
+            timestamp: data.timestamp, // 必填，生成签名的时间戳
+            nonceStr: data.nonceStr, // 必填，生成签名的随机串
+            signature: data.signature,// 必填，签名，见附录1
+            jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareQZone', 'onMenuShareWeibo'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+          });
+
+          var share = {
+            wx_title: '分享标题',
+            wx_content: '分享描述',
+            wx_img: 'http://www.ylzbl.com/web/img/logo.png',
+            wx_link: location.href,
+          };
+          wx.ready(function () {
+            wx.onMenuShareTimeline({
+              title: share.wx_title, // 分享标题
+              link: share.wx_link, // 分享链接
+              imgUrl: share.wx_img, // 分享图标
+              success: function () {
+
+              },
+              cancel: function () {
+
+              }
+            });
+
+            wx.onMenuShareAppMessage({
+              title: share.wx_title, // 分享标题
+              desc: share.wx_content, // 分享描述
+              link: share.wx_link, // 分享链接
+              imgUrl: share.share.wx_img, // 分享图标
+              success: function () {
+
+              },
+              cancel: function () {
+                // 用户取消分享后执行的回调函数
+              }
+            });
+          });
+
+        });
+      },
       addScore(e, n) {
         const self = this;
         $('.option').removeClass('on');
@@ -281,7 +306,7 @@
         $(e.target).removeClass('off');
         $(e.target).addClass('on');
         this.curScore = n;
-        console.log('curPage:' + self.curPage + ',curScore:' + self.curScore + ',totalScore:' + self.totalScore);
+        // console.log('curPage:' + self.curPage + ',curScore:' + self.curScore + ',totalScore:' + self.totalScore);
       },
       next: function () {
         const self = this;
@@ -299,7 +324,7 @@
         }
         self.btnS = 1;
 
-        console.log('curPage:' + self.curPage + ',curScore:' + self.curScore + ',totalScore:' + self.totalScore);
+        // console.log('curPage:' + self.curPage + ',curScore:' + self.curScore + ',totalScore:' + self.totalScore);
 
       },
     }
