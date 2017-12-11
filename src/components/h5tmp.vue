@@ -252,6 +252,7 @@
     },
     methods: {
       initWxShare() {
+
         $.get("/wx/get_wxData_share", {}, function (data, status, xhr) {
           console.log(data);
 
@@ -267,7 +268,7 @@
           var share = {
             wx_title: '分享标题',
             wx_content: '分享描述',
-            wx_img: 'http://www.ylzbl.com/wx/h5/20171210/wx.png',
+            wx_img: 'http://www.ylzbl.com/wx/h5/20171210/wx.jpg',
             wx_link: location.href,
           };
           wx.ready(function () {
@@ -287,7 +288,7 @@
               title: share.wx_title, // 分享标题
               desc: share.wx_content, // 分享描述
               link: share.wx_link, // 分享链接
-              imgUrl: share.share.wx_img, // 分享图标
+              imgUrl: share.wx_img, // 分享图标
               success: function () {
 
               },
