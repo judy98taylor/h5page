@@ -267,7 +267,7 @@
           var share = {
             wx_title: '分享标题',
             wx_content: '分享描述',
-            wx_img: 'http://www.ylzbl.com/web/img/logo.png',
+            wx_img: 'http://www.ylzbl.com/web/img/wx.png',
             wx_link: location.href,
           };
           wx.ready(function () {
