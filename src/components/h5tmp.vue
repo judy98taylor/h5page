@@ -254,11 +254,13 @@
     methods: {
       initWxShare() {
         const self = this;
-        $.get("/wx/get_wxData_share", {}, function (data, status, xhr) {
+        $.get("/wx/get_wxData_share", {
+          url: encodeURIComponent(location.href.split('#')[0])
+        }, function (data, status, xhr) {
           console.log(data);
           self.wxData_share = data.data;
           wx.config({
-            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
             appId: 'wx43d17d7d013dc48f', // 必填，公众号的唯一标识
             timestamp: self.wxData_share.timestamp, // 必填，生成签名的时间戳
             nonceStr: self.wxData_share.nonceStr, // 必填，生成签名的随机串
