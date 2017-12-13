@@ -139,6 +139,15 @@
       </div>
     </transition>
 
+    <transition name="fade">
+      <div class="p p8" v-show="curPage==9">
+        <img src="../assets/img/s60.jpg" alt="">
+        <a href="https://www.bagevent.com/event/932861?bag_track=ettmpower" class="link suofang" onclick="_hmt.push(['_trackEvent', 'btn', 'click', 'link', 'https://www.bagevent.com/event/932861?bag_track=ettmpower']);">
+          <img src="../assets/img/p8link.png" alt="">
+        </a>
+      </div>
+    </transition>
+
   </div>
 </template>
 
@@ -228,23 +237,31 @@
       ];
 
 
-      imgPreload(imgList1, () => {
-        self.curPage = 2;
-        imgPreload(imgList2);
-      });
-
-
-      // // location.search
-      // let arr = location.search.replace('?', '').split('&');
-      // let obj = {};
-      // arr.forEach((vv) => {
-      //   let k = vv.split('=')[0];
-      //   let v = vv.split('=')[1];
-      //   obj[k] = v;
+      // imgPreload(imgList1, () => {
+      //   self.curPage = 2;
+      //   imgPreload(imgList2);
       // });
-      // // console.log(obj);
 
-      // obj.p && (self.curPage = obj.p);
+
+      // location.search
+      let arr = location.search.replace('?', '').split('&');
+      let obj = {};
+      arr.forEach((vv) => {
+        let k = vv.split('=')[0];
+        let v = vv.split('=')[1];
+        obj[k] = v;
+      });
+      // console.log(obj);
+
+      if (obj.p) {
+        self.curPage = obj.p;
+        // http://a.com/?p=9
+      } else {
+        imgPreload(imgList1, () => {
+          self.curPage = 2;
+          imgPreload(imgList2);
+        });
+      }
       // console.log(navigator.userAgent.toLowerCase())
       // JS判断是否在微信浏览器打开
       try {
@@ -676,9 +693,9 @@
     text-decoration: none;
     position: absolute;
     /* background: red; */
-    width: 5rem;
-    top: 9.5rem;
-    left: 1.4rem;
+    width: 4rem;
+    top: 9.1rem;
+    left: 0.7rem;
     /* display: none; */
   }
 
