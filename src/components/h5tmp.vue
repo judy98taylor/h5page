@@ -139,15 +139,6 @@
       </div>
     </transition>
 
-    <transition name="fade">
-      <div class="p p8" v-show="curPage==9">
-        <img src="../assets/img/s60.jpg" alt="">
-        <a href="https://www.bagevent.com/event/932861?bag_track=ettmpower" class="link suofang" onclick="_hmt.push(['_trackEvent', 'btn', 'click', 'link', 'https://www.bagevent.com/event/932861?bag_track=ettmpower']);">
-          <img src="../assets/img/p8link.png" alt="">
-        </a>
-      </div>
-    </transition>
-
   </div>
 </template>
 
@@ -219,28 +210,28 @@
       ];
       let imgList2 = [
         require('../assets/img/s100.jpg'),
-        // require('../assets/img/s90.jpg'),
-        // require('../assets/img/s80.jpg'),
-        // require('../assets/img/s70.jpg'),
-        // require('../assets/img/s60.jpg'),
-        // require('../assets/img/s50.jpg'),
-        // require('../assets/img/s40.jpg'),
-        // require('../assets/img/s30.jpg'),
-        // require('../assets/img/s95.jpg'),
-        // require('../assets/img/s85.jpg'),
-        // require('../assets/img/s75.jpg'),
-        // require('../assets/img/s65.jpg'),
-        // require('../assets/img/s55.jpg'),
-        // require('../assets/img/s45.jpg'),
-        // require('../assets/img/s35.jpg'),
-        // require('../assets/img/s25.jpg'),
+        require('../assets/img/s90.jpg'),
+        require('../assets/img/s80.jpg'),
+        require('../assets/img/s70.jpg'),
+        require('../assets/img/s60.jpg'),
+        require('../assets/img/s50.jpg'),
+        require('../assets/img/s40.jpg'),
+        require('../assets/img/s30.jpg'),
+        require('../assets/img/s95.jpg'),
+        require('../assets/img/s85.jpg'),
+        require('../assets/img/s75.jpg'),
+        require('../assets/img/s65.jpg'),
+        require('../assets/img/s55.jpg'),
+        require('../assets/img/s45.jpg'),
+        require('../assets/img/s35.jpg'),
+        require('../assets/img/s25.jpg'),
       ];
 
 
-      // imgPreload(imgList1, () => {
-      //   self.curPage = 2;
-      //   imgPreload(imgList2);
-      // });
+      imgPreload(imgList1, () => {
+        self.curPage = 2;
+        imgPreload(imgList2);
+      });
 
 
       // location.search
@@ -253,15 +244,17 @@
       });
       // console.log(obj);
 
-      if (obj.p) {
-        self.curPage = obj.p;
-        // http://a.com/?p=9
-      } else {
-        imgPreload(imgList1, () => {
-          self.curPage = 2;
-          imgPreload(imgList2);
-        });
-      }
+      // if (obj.p) {
+      //   self.curPage = obj.p;
+      //   // http://a.com/?p=9
+      // } else {
+      //   imgPreload(imgList1, () => {
+      //     self.curPage = 2;
+      //     imgPreload(imgList2);
+      //   });
+      // }
+
+
       // console.log(navigator.userAgent.toLowerCase())
       // JS判断是否在微信浏览器打开
       try {
@@ -692,11 +685,10 @@
   .link {
     text-decoration: none;
     position: absolute;
-    /* background: red; */
-    width: 4rem;
-    top: 9.1rem;
-    left: 0.7rem;
-    /* display: none; */
+    width: 5rem;
+    top: 8.5rem;
+    left: 1.2rem;
+    animation: suofang 2s infinite linear;
   }
 
   .tada {
