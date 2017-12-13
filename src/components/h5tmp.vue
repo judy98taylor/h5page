@@ -102,8 +102,8 @@
         <img src="../assets/img/p6q.png" alt="" class="suofang">
         <br>
         <img src="../assets/img/p6a1.png" alt="" class="option" @click="addScore($event,5)">
-        <img src="../assets/img/p6a2.png" alt="" class="option" @click="addScore($event,10)">
-        <img src="../assets/img/p6a3.png" alt="" class="option" @click="addScore($event,20)" style="margin-top:-.2rem;">
+        <img src="../assets/img/p6a2.png" alt="" class="option" @click="addScore($event,20)">
+        <img src="../assets/img/p6a3.png" alt="" class="option" @click="addScore($event,10)" style="margin-top:-.2rem;">
         <img src="../assets/img/p6a4.png" alt="" class="option" @click="addScore($event,15)">
         <img class="next" src="../assets/img/p3next.png" alt="" @click="next()" v-show="curScore">
       </div>
@@ -768,4 +768,5 @@
   .fade-leave-to {
     opacity: 0;
   }
+
 </style>
