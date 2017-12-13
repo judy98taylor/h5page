@@ -291,8 +291,8 @@
           });
 
           var share = {
-            wx_title: '分享标题',
-            wx_content: '分享描述',
+            wx_title: '你离爆款有多远？',
+            wx_content: '娱乐资本论带你测一测你的娱乐力指数！',
             wx_img: 'http://www.ylzbl.com/wx/h5/20171210/wx.jpg',
             wx_link: location.href,
           };
