@@ -181,7 +181,6 @@
       //   // entire view has been rendered
       // });
       const self = this;
-      self.initWxShare();
       // img preload
       function imgPreload(imgList, cbk) {
         let count = 0;
@@ -205,10 +204,12 @@
         require('../assets/img/p2bg.jpg'),
         require('../assets/img/p2h2.png'),
         require('../assets/img/p2h.png'),
+      ];
+      let imgList2 = [
         require('../assets/img/p3a4.png'),
         require('../assets/img/p3q.png'),
       ];
-      let imgList2 = [
+      let imgList3 = [
         require('../assets/img/s100.jpg'),
         require('../assets/img/s90.jpg'),
         require('../assets/img/s80.jpg'),
@@ -230,19 +231,21 @@
 
       imgPreload(imgList1, () => {
         self.curPage = 2;
-        imgPreload(imgList2);
+        imgPreload(imgList2, () => {
+          // imgPreload(imgList3, () => { });
+        });
       });
 
 
-      // location.search
-      let arr = location.search.replace('?', '').split('&');
-      let obj = {};
-      arr.forEach((vv) => {
-        let k = vv.split('=')[0];
-        let v = vv.split('=')[1];
-        obj[k] = v;
-      });
-      // console.log(obj);
+      // // location.search
+      // let arr = location.search.replace('?', '').split('&');
+      // let obj = {};
+      // arr.forEach((vv) => {
+      //   let k = vv.split('=')[0];
+      //   let v = vv.split('=')[1];
+      //   obj[k] = v;
+      // });
+      // // console.log(obj);
 
       // if (obj.p) {
       //   self.curPage = obj.p;
@@ -262,6 +265,7 @@
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
           //在微信中打开
           console.log('在微信中打开 micromessenger');
+          self.initWxShare();
         }
         if (ua.match(/WeiBo/i) == "weibo") {
           //在新浪微博客户端打开
